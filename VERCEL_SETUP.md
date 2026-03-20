@@ -19,12 +19,12 @@
 - `VITE_API_URL` = `https://ваш-домен.vercel.app/api`
 
 ### Backend переменные (MongoDB):
-- `MONGODB_USERNAME` = `tradebot_rw`
+- `MONGODB_USERNAME` = `your_username`
 - `MONGODB_PASSWORD` = `!2xwXsNHP@CAvA`
-- `MONGODB_HOST` = `185.177.73.210`
+- `MONGODB_HOST` = `your_host`
 - `MONGODB_PORT` = `27017`
-- `MONGODB_DB` = `tradeBot`
-- `MONGODB_AUTH_SOURCE` = `tradeBot`
+- `MONGODB_DB` = `dashboard`
+- `MONGODB_AUTH_SOURCE` = `dashboard`
 - `FRONTEND_URL` = `https://ваш-домен.vercel.app`
 
 **Важно:** Замените `ваш-домен.vercel.app` на реальный домен вашего проекта на Vercel.

@@ -1,73 +1,84 @@
-# Welcome to your Lovable project
+# Dashboard Template
 
-## Project info
+A ready-to-use dashboard template built with React, TypeScript, Tailwind CSS, and shadcn/ui components. Includes a Node.js/Express backend with MongoDB support.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+## Tech Stack
 
-## How can I edit this code?
+**Frontend:**
+- React 18 + TypeScript
+- Vite
+- Tailwind CSS + shadcn/ui
+- React Router v6
+- React Query
+- Recharts
 
-There are several ways of editing your application.
+**Backend:**
+- Node.js + Express
+- MongoDB
 
-**Use Lovable**
+## Getting Started
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+### 1. Install frontend dependencies
 
-Changes made via Lovable will be committed automatically to this repo.
+```bash
+npm install
+```
 
-**Use your preferred IDE**
+### 2. Install backend dependencies
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+```bash
+cd server && npm install
+```
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+### 3. Configure the database
 
-Follow these steps:
+Copy `server/.env.example` to `server/.env` and fill in your MongoDB connection details:
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+```bash
+cp server/.env.example server/.env
+```
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+### 4. Run in development mode
 
-# Step 3: Install the necessary dependencies.
-npm i
+Start the backend:
+```bash
+cd server && npm run dev
+```
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+Start the frontend:
+```bash
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+The frontend runs on [http://localhost:8080](http://localhost:8080), the backend on [http://localhost:3001](http://localhost:3001).
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## Project Structure
 
-**Use GitHub Codespaces**
+```
+├── src/
+│   ├── components/
+│   │   ├── dashboard/     # Dashboard-specific components
+│   │   └── ui/            # shadcn/ui base components
+│   ├── pages/             # Route pages
+│   ├── lib/               # API client and utilities
+│   └── hooks/             # Custom React hooks
+├── server/
+│   ├── config/            # Database connection
+│   ├── routes/            # API route handlers
+│   └── index.js           # Express server entry point
+└── public/
+```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## Available Pages
 
-## What technologies are used for this project?
+- `/` — Main dashboard with stats, charts, and recent data
+- `/users` — Users list and detail pages
+- `/transactions` — Transaction history
+- `/positions` — Positions overview
+- `/referrals` — Referral tree
+- `/tasks` — Task management
+- `/settings` — Application settings
 
-This project is built with:
+## Deployment
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+See [VERCEL_SETUP.md](VERCEL_SETUP.md) for Vercel deployment instructions.

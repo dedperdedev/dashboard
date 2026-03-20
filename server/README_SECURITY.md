@@ -1,35 +1,16 @@
-# Настройка безопасности
+# Security Guidelines
 
-## Переменные окружения
+Never commit `.env` files to the repository. Use `.env.example` as a template.
 
-Перед запуском сервера необходимо создать файл `.env` в папке `server/` на основе `.env.example`:
+Required environment variables:
 
-```bash
-cd server
-cp .env.example .env
 ```
-
-Затем отредактируйте `.env` и укажите реальные значения:
-
-```env
-MONGODB_USERNAME=tradebot_rw
-MONGODB_PASSWORD=ваш_пароль
-MONGODB_HOST=185.177.73.210
+MONGODB_USERNAME=your_username
+MONGODB_PASSWORD=your_password
+MONGODB_HOST=your_host
 MONGODB_PORT=27017
-MONGODB_DB=tradeBot
-MONGODB_AUTH_SOURCE=tradeBot
-
-PORT=3001
-
-FRONTEND_URL=http://localhost:5173
+MONGODB_DB=dashboard
+MONGODB_AUTH_SOURCE=admin
 ```
 
-## Важно!
-
-- **НЕ коммитьте** файл `.env` в git репозиторий
-- Файл `.env` уже добавлен в `.gitignore`
-- Используйте `.env.example` как шаблон
-
-## Безопасность
-
-Все учетные данные теперь хранятся в переменных окружения, а не в коде.
+For production, use environment variables provided by your hosting platform (e.g., Vercel environment variables).

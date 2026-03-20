@@ -12,7 +12,7 @@ const username = process.env.MONGODB_USERNAME || "";
 const password = process.env.MONGODB_PASSWORD || "";
 const host = process.env.MONGODB_HOST || "localhost";
 const port = process.env.MONGODB_PORT || "27017";
-const dbName = process.env.MONGODB_DB || "tradeBot";
+const dbName = process.env.MONGODB_DB || "dashboard";
 const authSource = process.env.MONGODB_AUTH_SOURCE || "admin";
 
 const escaped_username = encodeURIComponent(username);
