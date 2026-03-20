@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "buildCommand": "npm run build",
+  "installCommand": "npm install && cd server && npm install",
+  "headers": [
+    {
+      "source": "/assets/(.*)\\.js",
+      "headers": [{ "key": "Content-Type", "value": "application/javascript" }]
+    },
+    {
+      "source": "/assets/(.*)\\.css",
+      "headers": [{ "key": "Content-Type", "value": "text/css" }]
+    }
+  ]
+}
